@@ -1,0 +1,19 @@
+<h2>Edit Account Details</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.input :current_password %>
+
+  <%= f.button :submit, :class => 'btn btn-success' %>
+
+<% end %>
+
+<h3>Cancel My Account</h3>
+
+<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-danger' %></p>

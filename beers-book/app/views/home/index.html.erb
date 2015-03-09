@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+	<div class="row">
+		<div class="col-md-2 col-md-offset-4">
+			<%= link_to new_post_path, remote: true do %>
+	      		<button class="btn btn-default">+New Post</button>
+	    	<% end %>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-2" id="post-form" style="display:none;"></div>
+	</div>
+
+	<div class="row">
+	  <div class="col-md-7 col-md-offset-1" id="all-posts"><%= render @posts %></div>
+	</div>
+<% end %>
