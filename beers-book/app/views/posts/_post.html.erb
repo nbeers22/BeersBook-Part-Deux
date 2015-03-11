@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+	<div class="row" id="post-boxes">
+		<div class="name-grav col-sm-3">
+			<%= gravatar_in_post(post.user.email) %>
+			<p><%= post.user.first_name.titleize %> <%= post.user.last_name.titleize %></p>
+		</div>
+		<div class="post-content col-sm-5">
+			<p><%= time_ago_in_words(post.created_at) %> ago</p>
+			<p><%= post.content %></p>
+		</div>
+	</div>
+
+<% end %>

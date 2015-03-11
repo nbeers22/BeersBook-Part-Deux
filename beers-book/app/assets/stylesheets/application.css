@@ -44,6 +44,27 @@ body{
     text-align: center;
 }
 
+#post-boxes {
+    background-color: yellow;
+    padding: 20px 0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#post-boxes div.name-grav {
+    border-right: 1px dotted black;
+}
+
+#each-post {
+    margin: 10px 0;
+}
+
+#each-post div.index-posts {
+    background-color: yellow;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
 #welcome-buttons {
     padding-bottom: 30px;
 }
