@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_action :all_posts, only: [:index, :create]
+	before_action :all_posts, only: [:index, :create, :update, :destroy]
 	respond_to :html, :js
 
 	def new

@@ -44,25 +44,16 @@ body{
     text-align: center;
 }
 
-#post-boxes {
-    background-color: yellow;
+div.post-boxes {
+    background-color: #FFFFF0;
     padding: 20px 0;
     border-radius: 5px;
     margin: 10px 0;
+    position: relative;
 }
 
-#post-boxes div.name-grav {
-    border-right: 1px dotted black;
-}
-
-#each-post {
-    margin: 10px 0;
-}
-
-#each-post div.index-posts {
-    background-color: yellow;
-    padding: 20px 0;
-    border-radius: 5px;
+div.post-boxes div.name-grav {
+    /*border-right: 1px dotted black;*/
 }
 
 #welcome-buttons {
@@ -131,14 +122,22 @@ div.post-box {
     position: relative;
 }
 
-.post-corner {
-    border-top-right-radius: 5px;
-}
-
 .post-box-arrow {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+div.time-ago {
+    color: white;
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+
+.post-corner {
+    border-top-right-radius: 5px;
 }
 
 .gravatar {

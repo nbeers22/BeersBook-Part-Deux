@@ -1,11 +1,27 @@
 <% @posts.each do |post| %>
-	<div class="row" id="post-boxes">
+	<div class="row post-boxes" id="post_<%= post.id %>">
+		<!-- Shows arrow in top right corner of post if it is that user's post -->
+		<% if current_user.id == post.user_id %>
+			<div class="post-corner post-box-arrow">
+				<div class="btn-group">
+				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu pull-right" role="menu">
+				    <li class="pull-left"><%= link_to "Edit Post"  %></li>
+				    <li class="pull-left"><%= link_to "Delete Post", post, method: :delete, remote: true %></li>
+				  </ul>
+				</div>
+			</div>
+		<% end %>
+		<!-- post content -->
 		<div class="name-grav col-sm-3">
 			<%= gravatar_in_post(post.user.email) %>
 			<p><%= post.user.first_name.titleize %> <%= post.user.last_name.titleize %></p>
 		</div>
 		<div class="post-content col-sm-5">
-			<p><%= time_ago_in_words(post.created_at) %> ago</p>
+			<div class="time-ago pull-left">
+				<span><%= time_ago_in_words(post.created_at) %> ago</span>
+			</div><br>
 			<p><%= post.content %></p>
 		</div>
 	</div>
