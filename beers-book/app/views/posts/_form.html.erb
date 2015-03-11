@@ -1,4 +1,4 @@
 <%= simple_form_for @post, remote: true do |f|   %>
-  <%= f.input  :content, input_html: {class: 'form-group' } %>
+  <%= f.input  :content, input_html: {class: 'form-control' }, label: false %><br>
   <%= f.button :submit, class: 'btn btn-success' %>
 <% end %>

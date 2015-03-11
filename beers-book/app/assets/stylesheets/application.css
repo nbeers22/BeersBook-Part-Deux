@@ -46,14 +46,20 @@ body{
 
 div.post-boxes {
     background-color: #FFFFF0;
-    padding: 20px 0;
+    padding: 16px 0;
     border-radius: 5px;
     margin: 10px 0;
     position: relative;
 }
 
 div.post-boxes div.name-grav {
-    /*border-right: 1px dotted black;*/
+    text-align: center;
+}
+
+#post_content {
+    margin: 2px -164.5px -2px -75px;
+    width: 424px;
+    height: 76px;
 }
 
 #welcome-buttons {
@@ -103,6 +109,10 @@ div.sign-in-button {
 
 }
 
+div.name-grav p {
+    padding-top: 5px;
+}
+
 div.post-box div.btn-group button {
     background-color: #FFFFE0;
     /*border-radius: none;*/
@@ -124,8 +134,8 @@ div.post-box {
 
 div.post-boxes div.post-box-arrow {
     position: absolute;
-    top: -1px;
-    right: -1px;
+    top: 0;
+    right: 0;
     background-color: #FFFFE0;
 }
 
@@ -135,6 +145,7 @@ div.time-ago {
     padding: 2px 5px;
     border-radius: 12px;
     font-size: 11px;
+    margin-top: -6px;
 }
 
 .post-corner {
@@ -144,6 +155,10 @@ div.time-ago {
 .gravatar {
     height: 50px;
     width: 50px;
+}
+
+.gravatar-in-post {
+    border-radius: 5px;
 }
 
 .name {

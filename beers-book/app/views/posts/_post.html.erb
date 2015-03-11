@@ -4,9 +4,9 @@
 		<% if current_user.id == post.user_id %>
 			<div class="post-corner post-box-arrow">
 				<div class="btn-group">
-				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
+				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" style="background-color:#FFFFF0;border:none;" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
 				  </button>
-				  <ul class="dropdown-menu pull-right" role="menu">
+				  <ul class="dropdown-menu pull-right" style="background-color:#FFFFF0;" role="menu">
 				    <li class="pull-left"><%= link_to "Edit Post", edit_post_path(post), remote: true %></li>
 				    <li class="pull-left"><%= link_to "Delete Post", post, method: :delete, remote: true %></li>
 				  </ul>
@@ -16,13 +16,21 @@
 		<!-- post content -->
 		<div class="name-grav col-sm-3">
 			<%= gravatar_in_post(post.user.email) %>
-			<p><%= post.user.first_name.titleize %> <%= post.user.last_name.titleize %></p>
+			<p>
+				<%= link_to user_path(post.user) do %>
+					<%= post.user.first_name.titleize %> <%= post.user.last_name.titleize %>
+				<% end %>
+			</p>
+			
+				<div class="time-ago">
+					<span><%= time_ago_in_words(post.created_at) %> ago</span>
+				</div>
+			</p>
 		</div>
-		<div class="post-content col-sm-5">
-			<div class="time-ago pull-left">
-				<span><%= time_ago_in_words(post.created_at) %> ago</span>
-			</div><br>
-			<p><%= post.content %></p>
+		<div class="post-content col-sm-8">
+			<br>
+			<p id="post-content"><%= post.content %></p>
+			<div class="col-md-6 col-md-offset-2" id="edit-form" style="display:none;"></div>
 		</div>
 	</div>
 
