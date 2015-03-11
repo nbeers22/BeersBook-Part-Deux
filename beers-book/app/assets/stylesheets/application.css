@@ -105,7 +105,7 @@ div.sign-in-button {
 
 div.post-box div.btn-group button {
     background-color: #FFFFE0;
-    border-radius: none;
+    /*border-radius: none;*/
 }
 
 div.post-corner div.btn-group ul {
@@ -122,10 +122,11 @@ div.post-box {
     position: relative;
 }
 
-.post-box-arrow {
+div.post-boxes div.post-box-arrow {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -1px;
+    right: -1px;
+    background-color: #FFFFE0;
 }
 
 div.time-ago {

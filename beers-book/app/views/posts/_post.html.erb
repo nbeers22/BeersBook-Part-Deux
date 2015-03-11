@@ -7,7 +7,7 @@
 				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
 				  </button>
 				  <ul class="dropdown-menu pull-right" role="menu">
-				    <li class="pull-left"><%= link_to "Edit Post"  %></li>
+				    <li class="pull-left"><%= link_to "Edit Post", edit_post_path(post), remote: true %></li>
 				    <li class="pull-left"><%= link_to "Delete Post", post, method: :delete, remote: true %></li>
 				  </ul>
 				</div>
