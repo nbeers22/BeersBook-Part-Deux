@@ -26,6 +26,16 @@ body{
     font-size: 24px;
 }
 
+.red-bold {
+    font-weight: bold;
+    color: red;
+}
+
+.green-bold {
+    font-weight: bold;
+    color: green;
+}
+
 .reg-form {
     padding: 0 30px 20px 30px;
     background-color: blue;
