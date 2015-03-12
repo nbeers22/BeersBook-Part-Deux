@@ -18,7 +18,10 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  resources :posts
+  resources :posts do
+      post 'liked_by'
+      post 'disliked_by'
+    end
   # Example resource route with options:
   #   resources :products do
   #     member do
