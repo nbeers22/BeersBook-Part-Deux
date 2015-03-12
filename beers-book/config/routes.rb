@@ -19,9 +19,11 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
-      post 'liked_by'
-      post 'disliked_by'
+    member do
+      put "like", to: "posts#upvote"
+      put "dislike", to: "posts#downvote"
     end
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do

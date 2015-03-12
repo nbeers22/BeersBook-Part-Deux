@@ -2,6 +2,18 @@ class PostsController < ApplicationController
 	before_action :all_posts, only: [:index, :create, :update, :destroy]
 	respond_to :html, :js
 
+	def upvote
+		@post = Post.find(params[:id])
+		@post.upvote_by(current_user)
+		redirect_to(root_path)
+	end
+
+	def downvote
+		@post = Post.find(params[:id])
+		@post.downvote_by(current_user)
+		redirect_to(root_path)
+	end
+
 	def new
 		@post = Post.new
 	end

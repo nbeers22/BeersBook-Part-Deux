@@ -1,9 +1,0 @@
-<% @posts.each do |post| %>
-	<div class="index-posts">
-		<div class="user-info">
-			<p>post.user.name</p>
-			<%= gravatar_for(current_user) %>
-		</div>
-		<p>post.content</p>
-	</div>		
-<% end %>

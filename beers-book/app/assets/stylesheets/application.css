@@ -44,18 +44,6 @@ body{
     text-align: center;
 }
 
-div.post-boxes {
-    background-color: #FFFFF0;
-    padding: 16px 0;
-    border-radius: 5px;
-    margin: 10px 0;
-    position: relative;
-}
-
-div.post-boxes div.name-grav {
-    text-align: center;
-}
-
 #post_content {
     margin: 2px -164.5px -2px -75px;
     width: 424px;
@@ -132,12 +120,45 @@ div.post-box {
     position: relative;
 }
 
+div.post-boxes {
+    min-height: 155px;
+    background-color: #FFFFF0;
+    padding-top: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+
+div.post-boxes div.name-grav {
+    text-align: center;
+}
+
 div.post-boxes div.post-box-arrow {
     position: absolute;
     top: 0;
     right: 0;
     background-color: #FFFFE0;
     
+}
+
+div.likes-container {
+    margin-top: 38px;
+}
+
+div.likes-container ul {
+    list-style-type: none;
+    position: absolute;
+    bottom: 0;
+}
+
+div.likes-container li {
+    display: inline;
+    padding: 1px;
+}
+
+div.likes-container ul li img {
+    height: 20px;
+    width: 20px;
 }
 
 div.time-ago {
@@ -160,6 +181,8 @@ div.time-ago {
 
 .gravatar-in-post {
     border-radius: 5px;
+    height: 50px;
+    width: 50px;
 }
 
 .name {
