@@ -27,16 +27,12 @@
 			<div class="likes-container">
 				<ul>
 					<li>
-						<%= link_to image_tag("thumbs_up.jpg"), like_post_path(post), method: :put %>
+						<%= link_to image_tag("thumbs_up.jpg"), like_post_path(post), method: :post, remote: true %>
 					</li>
 					<li>
-						<%= link_to image_tag("thumbs-down.jpg"),dislike_post_path(post), method: :put %>
+						<%= link_to image_tag("thumbs-down.jpg"),dislike_post_path(post), method: :post, remote: true %>
 					</li>
-					<% if post.score < 0 %>
-						<li class="red-bold"><%= post.score %></li>
-					<% else %>
-						<li class="green-bold">+<%= post.score %></li>
-					<% end %>
+					<li id="post_score_<%= post.id %>"><%= post.score %></li>
 				</ul>
 			</div>
 		</div>
@@ -45,5 +41,4 @@
 			<div class="col-md-6 col-md-offset-2" id="edit-form" style="display:none;"></div>
 		</div>
 	</div>
- 
 <% end %>

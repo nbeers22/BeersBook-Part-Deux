@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
   resources :posts do
     member do
-      put "like", to: "posts#upvote"
-      put "dislike", to: "posts#downvote"
+      post "like", to: "posts#upvote"
+      post "dislike", to: "posts#downvote"
     end
   end
   # Example resource route with options:

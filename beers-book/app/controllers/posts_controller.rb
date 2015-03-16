@@ -4,14 +4,16 @@ class PostsController < ApplicationController
 
 	def upvote
 		@post = Post.find(params[:id])
-		@post.upvote_by(current_user)
-		redirect_to(root_path)
+		unless @post.liked_by(current_user)
+			@post.upvote_by(current_user)
+		end
 	end
 
 	def downvote
 		@post = Post.find(params[:id])
-		@post.downvote_by(current_user)
-		redirect_to(root_path)
+		unless @post.disliked_by(current_user)
+			@post.upvote_by(current_user)
+		end
 	end
 
 	def new

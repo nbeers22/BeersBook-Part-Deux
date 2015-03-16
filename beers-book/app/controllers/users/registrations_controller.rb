@@ -43,13 +43,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     def configure_permitted_parameters
         devise_parameter_sanitizer.for(:sign_up) do |u|
-          u.permit(:first_name, :last_name, :user_name, :email, :password, :password_confirmation)
+          u.permit(:first_name, :last_name, :user_name, :email, :password, :password_confirmation, :avatar, :avatar_cache)
         end
     end
     
     def configure_account_update_params
         devise_parameter_sanitizer.for(:account_update)do |u|
-          u.permit(:first_name, :last_name, :user_name, :email, :password, :password_confirmation, :current_password)
+          u.permit(:first_name, :last_name, :user_name, :email, :password, :password_confirmation, :current_password, :avatar, :avatar_cache)
       end
     end
   # protected
