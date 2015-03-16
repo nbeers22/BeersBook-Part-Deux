@@ -27,13 +27,18 @@ body{
 }
 
 .red-bold {
-    font-weight: bold;
+    font-weight: 500;
     color: red;
 }
 
 .green-bold {
-    font-weight: bold;
+    font-weight: 500;
     color: green;
+}
+
+.black-bold {
+    color: black;
+    font-weight: 500;
 }
 
 .reg-form {

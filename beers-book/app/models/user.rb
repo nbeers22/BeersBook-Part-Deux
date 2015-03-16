@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
   validates :password, length: {minimum: 8}
 
   has_many :posts, dependent: :destroy
+
+  # Avatar for Users
+  # mount_uploader :avatar, AvatarUploader
+
+  # validates_presence_of   :avatar
+  # validates_integrity_of  :avatar
+  # validates_processing_of :avatar
 end
