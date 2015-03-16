@@ -1,2 +1,2 @@
-var postScore = $('#post_score_<%= @post.id %>');
-postScore.text(<%= @post.score %>);
+var postScore = $('#post_downscore_<%= @post.id %>');
+postScore.text(<%= @post.get_dislikes.size %>);

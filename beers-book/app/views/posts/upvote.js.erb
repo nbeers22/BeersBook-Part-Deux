@@ -1,4 +1,2 @@
-var postScore = $('#post_score_<%= @post.id %>');
-var likes = $('likes-container ul li:eq(3)')
-
-postScore.text(<%= @post.score %>);
+var postScore = $('#post_upscore_<%= @post.id %>');
+postScore.text(<%= @post.get_likes.size %>);
