@@ -157,13 +157,15 @@ div.post-boxes div.post-box-arrow {
 }
 
 div.likes-container {
-    margin-top: 38px;
+    margin: 38px 0 0 -10px;
+
 }
 
 div.likes-container ul {
     list-style-type: none;
     position: absolute;
     bottom: 0;
+    width: 115px;
 }
 
 div.likes-container li {
