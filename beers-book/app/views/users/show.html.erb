@@ -12,7 +12,8 @@
 </div>
 
 <% @posts.each do |post| %>
-	<div class="row col-sm-7 post-boxes" id="post_<%= post.id %>">
+	<div class="col-sm-7 col-sm-offset-5" id="user-posts">
+	<div class="row post-boxes" id="post_<%= post.id %>">
 		<!-- Shows arrow in top right corner of post if it is that user's post -->
 		<% if current_user.id == post.user_id %>
 			<div class="post-corner post-box-arrow">
@@ -57,4 +58,7 @@
 			<div class="col-md-6 col-md-offset-2" id="edit-form" style="display:none;"></div>
 		</div>
 	</div>
+	</div>
+
 <% end %>
+</div>
