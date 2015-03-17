@@ -1,1 +1,64 @@
-<h1><%= @user.first_name.titleize %> <%= @user.last_name.titleize %>'s Profile</h1>
+<h1 class="profile-title"><%= @user.first_name.titleize %> <%= @user.last_name.titleize %>'s Profile</h1>
+
+<div class="col-sm-5" id="friends">
+	<div class="friends-box">
+		<div class="friends-title">
+			<p>Friends</p>
+		</div>
+		<div class="friend-content">
+
+		</div>
+	</div>
+</div>
+
+<% @posts.each do |post| %>
+	<div class="col-sm-7 col-sm-offset-5" id="user-posts">
+	<div class="row post-boxes" id="post_<%= post.id %>">
+		<!-- Shows arrow in top right corner of post if it is that user's post -->
+		<% if current_user.id == post.user_id %>
+			<div class="post-corner post-box-arrow">
+				<div class="btn-group">
+				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" style="background-color:#FFFFF0;border:none;" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu pull-right" style="background-color:#FFFFF0;" role="menu">
+				    <li class="pull-left"><%= link_to "Edit Post", edit_post_path(post), remote: true %></li>
+				    <li class="pull-left"><%= link_to "Delete Post", post, method: :delete, remote: true %></li>
+				  </ul>
+				</div>
+			</div>
+		<% end %>
+		<!-- post content -->
+		<div class="name-grav col-sm-3">
+			<%= gravatar_in_post(post.user.email) %>
+			<p>
+				<%= link_to user_path(post.user) do %>
+					<%= post.user.first_name.titleize %> <%= post.user.last_name.titleize %>
+				<% end %>
+			</p>
+			<div class="time-ago">
+				<span><%= time_ago_in_words(post.created_at) %> ago</span>
+			</div>
+			<div class="likes-container">
+				<ul>
+					<li>
+						<%= link_to image_tag("thumbs_up.jpg"), like_post_path(post), method: :post, remote: true %>
+					</li>
+					<li class="green-bold" id="post_upscore_<%= post.id %>"><%= post.get_likes.size %></li>
+					<li>
+						<%= link_to image_tag("thumbs-down.jpg"),dislike_post_path(post), method: :post, remote: true %>
+					</li>
+
+					<li class="red-bold" id="post_downscore_<%= post.id %>"><%= post.get_dislikes.size %></li>
+						
+				</ul>
+			</div>
+		</div>
+		<div class="post-content col-sm-8">
+			<p id="post-content"><%= post.content %></p>
+			<div class="col-md-6 col-md-offset-2" id="edit-form" style="display:none;"></div>
+		</div>
+	</div>
+	</div>
+
+<% end %>
+</div>

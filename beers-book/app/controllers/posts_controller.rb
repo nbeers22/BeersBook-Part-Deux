@@ -3,8 +3,8 @@ class PostsController < ApplicationController
 	respond_to :html, :js
 
 	def upvote
-		if current_user.id != post.user_id
-			@post = Post.find(params[:id])
+		@post = Post.find(params[:id])
+		if current_user.id != @post.user_id
 			unless @post.liked_by(current_user)
 				@post.upvote_by(current_user)
 			end
@@ -12,8 +12,8 @@ class PostsController < ApplicationController
 	end
 
 	def downvote
-		if current_user.id != post.user_id
-			@post = Post.find(params[:id])
+		@post = Post.find(params[:id])
+		if current_user.id != @post.user_id
 			unless @post.disliked_by(current_user)
 				@post.upvote_by(current_user)
 			end
