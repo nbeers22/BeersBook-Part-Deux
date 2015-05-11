@@ -32,8 +32,8 @@ body{
     height: 300px;
     background-color: #FFFFF0;
     border-radius: 5px;
-    margin-top: 10px;
-    padding-top: 5px;
+    margin-top: 5px;
+    padding-top: 10px;
 }
 
 .welcome-message {
@@ -149,6 +149,10 @@ div.post-box {
     margin-bottom: 10px;
     border-radius: 5px;
     position: relative;
+}
+
+div#user-posts div.post-boxes {
+    margin: 5px 0;
 }
 
 div.post-boxes {
