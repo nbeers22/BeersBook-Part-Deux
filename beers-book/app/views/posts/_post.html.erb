@@ -40,8 +40,8 @@
 			</div>
 		</div>
 		<div class="post-content col-sm-8">
-			<p id="post-content"><%= post.content %></p>
-			<div class="col-md-6 col-md-offset-2" id="edit-form" style="display:none;"></div>
+			<p id="post-content-<%= post.id %>"><%= post.content %></p>
+			<div class="col-md-6 col-md-offset-2 edit-form-<%= post.id %>" style="display:none;"></div>
 		</div>
 	</div>
 <% end %>
