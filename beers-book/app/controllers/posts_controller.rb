@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	before_action :all_posts, only: [:index, :create, :update, :destroy]
 	respond_to :html, :js
+	skip_before_action :verify_authenticity_token
 
 	def upvote
 		@post = Post.find(params[:id])
@@ -47,7 +48,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.require(:post).permit(:content, :user_id)
+		params.require(:post).permit(:content, :picture, :user_id)
 	end
 
 	def all_posts

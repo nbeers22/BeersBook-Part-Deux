@@ -29,18 +29,23 @@
 					<li>
 						<%= link_to image_tag("thumbs_up.jpg"), like_post_path(post), method: :post, remote: true %>
 					</li>
-					<li class="green-bold" id="post_upscore_<%= post.id %>"><%= post.get_likes.size %></li>
+					<li class="green-bold" id="post_upscore_<%= post.id %>">
+						<%= post.get_likes.size %>
+					</li>
 					<li>
 						<%= link_to image_tag("thumbs-down.jpg"),dislike_post_path(post), method: :post, remote: true %>
 					</li>
 
-					<li class="red-bold" id="post_downscore_<%= post.id %>"><%= post.get_dislikes.size %></li>
+					<li class="red-bold" id="post_downscore_<%= post.id %>">
+						<%= post.get_dislikes.size %>
+					</li>
 						
 				</ul>
 			</div>
 		</div>
 		<div class="post-content col-sm-8">
 			<p id="post-content-<%= post.id %>"><%= post.content %></p>
+			<%= image_tag post.picture.url if post.picture? %>
 			<div class="col-md-6 col-md-offset-2 edit-form-<%= post.id %>" style="display:none;"></div>
 		</div>
 	</div>
