@@ -24,11 +24,17 @@
 				  </button>
 				  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 				    <li role="presentation">
-				    	<%= link_to "Profile", user_path(current_user), :class => 'navbar-link', :role => "menuitem", :tabindex => '-1' %></li>
+				    	<%= link_to "Profile", user_path(current_user), :class => 'navbar-link pull-left', :role => "menuitem", :tabindex => '-1' %>
+						<%= image_tag 'profile-icon.png', :class => 'profile-icon pull-right' %>
+				    </li>
 				    <li role="presentation">
-				    	<%= link_to "Account", edit_user_registration_path(current_user), :class => 'navbar-link', :role => "menuitem", :tabindex => '-1' %></li>
+				    	<%= link_to "Account", edit_user_registration_path(current_user), :class => 'navbar-link pull-left', :role => "menuitem", :tabindex => '-1' %>
+						<%= image_tag 'account-icon.png', :class => 'profile-icon pull-right' %>
+				    </li>
 				    <li role="presentation">
-				    	<%= link_to "Logout", destroy_user_session_path, :class => 'navbar-link', :role => "menuitem", :tabindex => '-1' %></li>
+				    	<%= link_to "Logout", destroy_user_session_path, :class => 'navbar-link pull-left', :role => "menuitem", :tabindex => '-1' %>
+						<%= image_tag 'logout-icon.png', :class => 'profile-icon pull-right' %>
+				    </li>
 				  </ul>
 				</div>
 			<% else %>

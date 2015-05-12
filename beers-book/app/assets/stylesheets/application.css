@@ -150,15 +150,20 @@ div#nav-dropdown button.dropdown-toggle {
 }
 
 div#nav-dropdown ul.dropdown-menu {
-    background-color: #FFFFF0;
+    background-color: #222;
+    margin-top: -1px;
 }
 
 div#nav-dropdown ul.dropdown-menu li a {
-    color: #222;
+    color: #ffffff;
 }
 
-div#nav-dropdown ul.dropdown-menu li:hover {
-    background-color: red;
+div#nav-dropdown ul.dropdown-menu li {
+    padding: 12px 0 40px;
+}
+
+.profile-icon {
+    padding: 3px 15px 0;
 }
 
 div.name-grav p {
