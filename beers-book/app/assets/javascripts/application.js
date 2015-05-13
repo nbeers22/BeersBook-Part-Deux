@@ -19,11 +19,26 @@
 
 $(document).ready(function(){
 	hideWelcomeButtons();
+	rotateCarets();
 });
 
 var hideWelcomeButtons = function(){
 	$('#register, #login').on('click', function(e){
 		e.preventDefault();
 		$('#welcome-buttons').fadeOut('slow')
+	});
+};
+
+var rotateCarets = function(){
+	var element = $('span.caret').parent();
+	var rotated = false;
+	element.on('click', function(){
+		if (rotated == false) {
+			$(this).find($('span.caret')).addClass('rotate');
+			rotated = true;
+		}else{
+			$(this).find($('span.caret')).removeClass('rotate');
+			rotated = false;
+		}
 	});
 };
