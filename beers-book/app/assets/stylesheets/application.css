@@ -82,9 +82,7 @@ body{
 }
 
 #post_content {
-    margin: 2px -164.5px -2px -75px;
-    width: 424px;
-    height: 76px;
+    height: 100px;
 }
 
 #welcome-buttons {
@@ -171,13 +169,29 @@ div#nav-dropdown ul.dropdown-menu li:hover {
     /*padding: 3px 15px 0;*/
 }
 
+/* ----- Modal Styles ------ */
+
+div#post-modal div.modal-header span {
+    font-size: 1.7em;
+    color: red;
+}
+
+div#post-modal div.modal-body input.btn-success {
+    position: relative;
+    bottom: 33px;
+}
+
+div#post-modal div.modal-body textarea {
+  resize: none;
+  overflow: auto; /* For IE to remove scrollbars*/
+}
+
 div.name-grav p {
     padding-top: 5px;
 }
 
 div.post-box div.btn-group button {
     background-color: #FFFFE0;
-    /*border-radius: none;*/
 }
 
 div.post-corner div.btn-group ul {
