@@ -152,18 +152,23 @@ div#nav-dropdown button.dropdown-toggle {
 div#nav-dropdown ul.dropdown-menu {
     background-color: #222;
     margin-top: -1px;
+    padding: 0;
 }
 
-div#nav-dropdown ul.dropdown-menu li a {
-    color: #ffffff;
+div#nav-dropdown ul.dropdown-menu li span {
+    color: #fff;
 }
 
 div#nav-dropdown ul.dropdown-menu li {
-    padding: 12px 0 40px;
+    padding: 12px 15px 40px;
+}
+
+div#nav-dropdown ul.dropdown-menu li:hover {
+    border: 2px solid #fff;
 }
 
 .profile-icon {
-    padding: 3px 15px 0;
+    /*padding: 3px 15px 0;*/
 }
 
 div.name-grav p {

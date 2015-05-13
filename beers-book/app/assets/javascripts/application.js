@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require bootstrap.min
@@ -19,6 +20,10 @@
 
 $(document).ready(function(){
 	hideWelcomeButtons();
+	rotateCarets();
+});
+
+$(document).on('page:change', function () {
 	rotateCarets();
 });
 
