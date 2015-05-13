@@ -45,5 +45,6 @@ var rotateCarets = function(){
 			$(this).find($('span.caret')).removeClass('rotate');
 			rotated = false;
 		}
+		
 	});
 };
