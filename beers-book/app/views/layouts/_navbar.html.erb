@@ -35,7 +35,7 @@
 							<%= image_tag 'account-icon.png', :class => 'profile-icon pull-right' %>
 				    	</li>
 				    <% end %>
-				    <%= link_to destroy_user_session_path do %>
+				    <%= link_to destroy_user_session_path, method: :delete do %>
 				    	<li role="presentation">
 				    	<span class="pull-left" role="menuitem" tavindex="-1">Logout</span>
 						<%= image_tag 'logout-icon.png', :class => 'profile-icon pull-right' %>

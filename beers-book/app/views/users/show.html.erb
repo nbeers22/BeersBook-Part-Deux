@@ -1,4 +1,3 @@
-<h1 class="profile-title"><%= @user.first_name.titleize %> <%= @user.last_name.titleize %>'s Profile</h1>
 
 <div class="col-sm-5" id="friends">
 	<div class="row">
@@ -14,10 +13,6 @@
 </div>
 
 <div class="col-sm-7 all-posts" id="user-posts">
-	<div class="col-sm-12">
-		<p class="share text-center">Share something...</p>
-		
-	</div>
 	<% @posts.each do |post| %>
 	<div class="row col-sm-12 post-boxes" id="post_<%= post.id %>">
 		<!-- Shows arrow in top right corner of post if it is that user's post -->
