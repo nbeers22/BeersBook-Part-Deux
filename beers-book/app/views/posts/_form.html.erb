@@ -1,5 +1,5 @@
 <%= simple_form_for @post, remote: true, html: { multipart: true } do |f|   %>
-  <%= f.input :content, input_html: {class: 'form-control' }, label: false %><br>
-  <%= f.input :picture, as: :file %>
-  <%= f.button :submit, class: 'btn btn-success' %>
+  <%= f.input :content, input_html: {class: 'form-control'}, label: false %><br>
+  <%= f.input :picture, as: :file, label: 'Add a picture (optional)' %>
+  <%= f.button :submit, class: 'btn btn-success pull-right' %>
 <% end %> 

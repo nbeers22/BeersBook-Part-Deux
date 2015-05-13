@@ -1,2 +1,2 @@
-$('#post-form').html("<%= j (render 'form') %>");
-$('#post-form').slideDown(350);
+$('#post-modal').find('.modal-body').html("<%= j (render 'form') %>");
+$('#post-modal').modal('show');
