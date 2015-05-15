@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 	before_action :find_comment, only: [:edit, :destroy]
+	respond_to :html, :js
+	
 	def create
 		@comment = Comment.create(post_params)
 	end
