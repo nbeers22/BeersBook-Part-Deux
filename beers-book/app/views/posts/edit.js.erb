@@ -1,3 +1,4 @@
 $('#post-content-<%= @post.id %>').fadeOut("fast"); 
+$('#post-content-<%= @post.id %>').parent().find('img').addClass('hide');
 $('.edit-form-<%= @post.id %>').html("<%= j (render 'form') %>");
 $('.edit-form-<%= @post.id %>').fadeIn("fast");

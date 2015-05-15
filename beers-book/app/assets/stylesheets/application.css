@@ -199,6 +199,20 @@ div.post-corner div.btn-group ul {
     top: 93%;
 }
 
+.post-content .post_content textarea {
+    resize: none;
+}
+
+.post-content .edit_post input.button {
+    position: relative;
+    top: -41px;
+}
+
+.post-content .edit_post input.file {
+    position: relative;
+    top: -41px;
+}
+
 div.post-box {
     background-color: #FFFFE0;
     min-height: 150px;

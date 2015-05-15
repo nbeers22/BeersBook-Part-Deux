@@ -46,7 +46,7 @@
 		<div class="post-content col-sm-8">
 			<p id="post-content-<%= post.id %>"><%= post.content %></p>
 			<%= image_tag post.picture.url if post.picture? %>
-			<div class="col-md-6 col-md-offset-2 edit-form-<%= post.id %>" style="display:none;"></div>
+			<div class="col-md-10 col-md-offset-1 edit-form-<%= post.id %>" style="display:none;"></div>
 		</div>
 	</div>
 <% end %>
