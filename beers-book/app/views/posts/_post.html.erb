@@ -47,6 +47,10 @@
 			<p id="post-content-<%= post.id %>"><%= post.content %></p>
 			<%= image_tag post.picture.url if post.picture? %>
 			<div class="col-md-10 col-md-offset-1 edit-form-<%= post.id %>" style="display:none;"></div>
+			<p class="text-center">
+				<%= link_to "Add Comment", new_post_comment_path(post), remote: true %>
+			</p>
+			<div class="col-md-10 col-md-offset-1" id="comment-form" style="display:none;"></div>
 		</div>
 	</div>
 <% end %>

@@ -199,6 +199,10 @@ div.post-corner div.btn-group ul {
     top: 93%;
 }
 
+.post-content img {
+    padding-bottom: 20px;
+}
+
 .post-content .post_content textarea {
     resize: none;
 }

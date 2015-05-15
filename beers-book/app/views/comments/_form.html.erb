@@ -1,0 +1,4 @@
+<%= simple_form_for post_comments_path(@post), method: :post,  remote: true, html: { multipart: true } do |f| %>
+	<%= f.input :body, placeholder: "Add Comment", input_html: {class: 'form-control'}, label: false %><br>
+  <%= f.button :submit, class: 'btn btn-success' %>
+<% end %>
