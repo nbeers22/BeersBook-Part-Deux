@@ -1,11 +1,12 @@
 class CommentsController < ApplicationController
-	before_action :find_post_and_comments, only: [:edit, :destroy]
+	before_action :find_post_and_comments, only: [:edit, :update, :destroy]
 	respond_to :html, :js
 	
 	def create
 		@post = Post.find(params[:post_id])
-		@comment = Comment.create(post_params)
-		@comment.post = @post
+		# @comment = Comment.create(post_params)
+		# @comment.post = @post
+		@comment = @post.comments.create(post_params)
 		@comment.user = current_user
 		@comment.save
 	end
