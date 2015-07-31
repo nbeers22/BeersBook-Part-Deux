@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   validates :password, length: {minimum: 8}
 
   has_many :posts, dependent: :destroy
+  has_many :user_friendships
+  has_many :friends, through: :user_friendships
 
   # Avatar for Users
   # mount_uploader :avatar, AvatarUploader
