@@ -24,6 +24,8 @@ Rails.application.routes.draw do
       post "dislike", to: "posts#downvote"
     end
   end
+
+  resources :user_friendships
   # Example resource route with options:
   #   resources :products do
   #     member do

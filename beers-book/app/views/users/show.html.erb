@@ -1,6 +1,11 @@
 
 <div class="col-sm-5" id="friends">
 	<div class="row">
+		<div class="col-sm-12 add-friend">
+			<%= link_to new_user_friendship_path(friend_id: @user) do %>
+				<button class="btn btn-primary">Add <%= @user.first_name.titleize %> <%= @user.last_name.titleize %> as a friend</button>
+			<% end %>
+		</div>
 		<div class="friends-box col-sm-12">
 			<div class="friends-title">
 				<p>Friends</p>
